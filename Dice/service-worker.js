@@ -6,8 +6,8 @@ self.addEventListener('install', (event) => {
         '/Dice/index.html',
         '/Dice/style.css',
         '/Dice/script.js',
-        '/Dice/path/to/icon-192x192.png',
-        '/Dice/path/to/icon-512x512.png',
+        '/Dice/icon-192x192.png',
+        '/Dice/icon-512x512.png',
       ]);
     })
   );
