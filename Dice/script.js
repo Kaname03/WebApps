@@ -98,3 +98,16 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+window.tweetResults = function() {
+  const numDice = document.getElementById("num_dice").value;
+  const numSides = document.getElementById("num_sides").value;
+  const results = document.getElementById("result").textContent;
+
+  const baseUrl = "https://git.xn--nck3b1a.com/Dice/";
+  const queryParams = `?dice=${numDice}&sides=${numSides}`;
+  const appUrl = baseUrl + queryParams;
+
+  const tweetText = `サイコロの結果: ${results}\nインターバルダイスで振りました！\n面数: ${numSides} 個数: ${numDice}\n${appUrl}`;
+  const url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+  window.open(url, "_blank");
+}
