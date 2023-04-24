@@ -1,0 +1,20 @@
+{
+  "name": "Interval Dice",
+  "short_name": "iDice",
+  "start_url": "/Dice/",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "theme_color": "#333",
+  "icons": [
+    {
+      "src": "/Dice/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Dice/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
