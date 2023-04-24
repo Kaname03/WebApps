@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>サイコロを振る</title>
-  </head>
-  <body>
-    <h1>サイコロを振る</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>サイコロを振る</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWBV5TE0S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <label for="num_sides">サイコロの面数:</label>
-    <input type="number" id="num_sides" value="6" min="1" />
-    <br />
+    gtag('config', 'G-ZVWBV5TE0S');
+  </script>
+</head>
+<body>
+  <h1>サイコロを振る</h1>
 
-    <label for="num_dice">サイコロの個数:</label>
-    <input type="number" id="num_dice" value="1" min="1" />
-    <br />
+  <label for="num_sides">サイコロの面数:</label>
+  <input type="number" id="num_sides" value="6" min="1" />
+  <br />
 
-    <button id="roll_button">サイコロを振る</button>
-    <br />
+  <label for="num_dice">サイコロの個数:</label>
+  <input type="number" id="num_dice" value="1" min="1" />
+  <br />
 
-    <label for="wait_time_minutes">待機時間（分）:</label>
-    <input type="number" id="wait_time_minutes" value="0" min="0" />
-  
-    <label for="wait_time_seconds">待機時間（秒）:</label>
-    <input type="number" id="wait_time_seconds" value="0" min="0" />
-    <br />
-    <button id="countdown_start_button">カウントダウンを開始</button>
-    <br />
-    <p id="countdown"></p>
-    <p id="result"></p>
+  <button id="roll_button">サイコロを振る</button>
+  <br />
 
-    <script src="script.js"></script>
-  </body>
+  <label for="wait_time_minutes">待機時間（分）:</label>
+  <input type="number" id="wait_time_minutes" value="0" min="0" />
+
+  <label for="wait_time_seconds">待機時間（秒）:</label>
+  <input type="number" id="wait_time_seconds" value="0" min="0" />
+  <br />
+  <button id="countdown_start_button">カウントダウンを開始</button>
+  <br />
+  <p id="countdown"></p>
+  <p id="result"></p>
+
+  <script src="script.js"></script>
+</body>
 </html>

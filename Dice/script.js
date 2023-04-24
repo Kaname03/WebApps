@@ -12,6 +12,24 @@ const alertSound = new Audio("alert.mp3");
 rollButton.addEventListener("click", rollDice);
 countdownStartButton.addEventListener("click", startCountdown);
 
+
+function getQueryParams() {
+  const queryParams = new URLSearchParams(window.location.search);
+  return {
+    numSides: queryParams.get("numSides"),
+    numDice: queryParams.get("numDice"),
+  };
+}
+
+const queryParams = getQueryParams();
+if (queryParams.numSides) {
+  numSidesInput.value = queryParams.numSides;
+}
+if (queryParams.numDice) {
+  numDiceInput.value = queryParams.numDice;
+}
+
+
 function rollDice() {
   const numSides = parseInt(numSidesInput.value);
   const numDice = parseInt(numDiceInput.value);
