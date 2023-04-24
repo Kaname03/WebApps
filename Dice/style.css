@@ -1,60 +1,67 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2rem;
-    line-height: 1.6;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  input,
-  button {
-    font-size: 1rem;
-  }
-  
-  input {
-    display: inline-block;
-    width: 60%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  label {
-    display: inline-block;
-    width: 30%;
-    margin-bottom: 1rem;
-    text-align: right;
-    margin-right: 1rem;
-  }
-  
-  button {
-    background-color: #333;
-    color: white;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #666;
-  }
-  
-  p {
-    margin-bottom: 1rem;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+input,
+button {
+  font-size: 1rem;
+}
+
+input {
+  display: inline-block;
+  width: 60%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 1rem;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* カウントダウンのスタイル */
+#countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4500;
+  margin-top: 1rem;
+}
