@@ -12,20 +12,22 @@ for (var i = 0; i < numShapes; i++) {
   var shape = {};
   shape.x = Math.random() * canvas.width;
   shape.y = Math.random() * canvas.height;
-  shape.color = "rgba(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", 0.5)";
+  shape.color = "#00bfff";
   shape.vx = Math.random() * 2 - 1;
   shape.vy = Math.random() * 2 - 1;
+  shape.connections = [];
   shapes.push(shape);
 }
 
 // 描画関数
 function draw() {
   // 背景のクリア
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#0a192f";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // 図形の描画
   for (var i = 0; i < numShapes; i++) {
-    ctx.fillStyle = shapes[i].color;
+    ctx.fillStyle = "#0077c2";
     ctx.beginPath();
     ctx.arc(shapes[i].x, shapes[i].y, size, 0, Math.PI * 2, false);
     ctx.closePath();
@@ -37,11 +39,28 @@ function draw() {
       var dy = shapes[i].y - shapes[j].y;
       var dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 100) {
-        ctx.strokeStyle = "rgba(255, 255, 255, " + (1 - dist / 100) + ")";
+        ctx.strokeStyle = "#00bfff";
+        ctx.globalAlpha = 1 - dist / 100;
         ctx.beginPath();
         ctx.moveTo(shapes[i].x, shapes[i].y);
         ctx.lineTo(shapes[j].x, shapes[j].y);
         ctx.stroke();
+
+        // 重複を避ける
+        if (!shapes[i].connections.includes(j)) {
+          shapes[i].connections.push(j);
+        }
+        if (!shapes[j].connections.includes(i)) {
+          shapes[j].connections.push(i);
+        }
+      } else {
+        // 重複を解除する
+        if (shapes[i].connections.includes(j)) {
+          shapes[i].connections.splice(shapes[i].connections.indexOf(j), 1);
+        }
+        if (shapes[j].connections.includes(i)) {
+          shapes[j].connections.splice(shapes[j].connections.indexOf(i), 1);
+        }
       }
     }
 
@@ -64,22 +83,26 @@ function draw() {
     if (shapes[i].y + size > canvas.height || shapes[i].y - size < 0) {
       shapes[i].vy = -shapes[i].vy;
     }
-
     // 図形の移動
     shapes[i].x += shapes[i].vx;
     shapes[i].y += shapes[i].vy;
   }
 
+  // 線の透明度を元に戻す
+  ctx.globalAlpha = 1;
+
   requestAnimationFrame(draw);
 }
 
-// マウスカーソルの位置を取得
+// mouseXとmouseYの初期値は0として定義
 var mouseX = 0;
 var mouseY = 0;
+
+// マウスカーソルの位置を追跡し、mouseXとmouseYを更新
 document.addEventListener('mousemove', function (event) {
   mouseX = event.clientX;
   mouseY = event.clientY;
 });
 
-// 描画関数の呼び出し
+// 描画関数を呼び出し
 draw();
