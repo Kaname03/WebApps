@@ -7,14 +7,14 @@
   "theme_color": "#333",
   "icons": [
     {
-      "src": "/Dice/favicon/256.png",
-      "sizes": "256x256",
+      "src": "https://git.xn--nck3b1a.com/Dice/favicon/192.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/Dice/favicon/512.png",
+      "src": "https://git.xn--nck3b1a.com/Dice/favicon/512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ]  
 }
