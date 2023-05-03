@@ -5,6 +5,7 @@ const urlsToCache = [
   '/src/style.css',
   '/src/sp-style.css',
   '/favicon/128.png',
+  '/favicon/192.png',
   '/favicon/256.png',
   '/favicon/512.png',
 ];

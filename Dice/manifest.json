@@ -1,20 +1,21 @@
 {
   "name": "Interval Dice",
-  "short_name": "iDice",
-  "start_url": "/Dice/",
+  "short_name": "IntervalDice",
+  "description": "面数と個数を指定してサイコロを振るウェブアプリ",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#f0f0f0",
-  "theme_color": "#333",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
   "icons": [
     {
-      "src": "https://git.xn--nck3b1a.com/Dice/favicon/192.png",
+      "src": "/favicon/192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://git.xn--nck3b1a.com/Dice/favicon/512.png",
+      "src": "/favicon/512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]  
+  ]
 }
