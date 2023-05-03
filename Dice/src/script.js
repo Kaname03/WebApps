@@ -111,3 +111,9 @@ window.tweetResults = function() {
   const url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
   window.open(url, "_blank");
 }
+rollButton.addEventListener("click", () => {
+  rollButton.classList.add("roll-animation");
+  setTimeout(() => {
+    rollButton.classList.remove("roll-animation");
+  }, 500);
+});
