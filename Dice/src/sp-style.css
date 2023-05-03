@@ -52,4 +52,9 @@
     color: #e74c3c;
     margin-bottom: 20px;
   }
+  
+  label {
+    white-space: nowrap;
+  }
+  
 }
