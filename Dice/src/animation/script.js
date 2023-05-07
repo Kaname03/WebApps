@@ -16,7 +16,7 @@ document.body.appendChild(canvas);
 
 // 図形の設定
 var shapes = [];
-var numShapes = 400;
+var numShapes = window.innerWidth > 600 ? 400 : 100; // スマートフォンでは100個に減らす
 var size = 4;
 for (var i = 0; i < numShapes; i++) {
   var shape = {};
@@ -28,6 +28,7 @@ for (var i = 0; i < numShapes; i++) {
   shape.connections = [];
   shapes.push(shape);
 }
+
 
 // 描画関数
 function drawBackground() {
