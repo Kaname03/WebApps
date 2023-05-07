@@ -22,9 +22,9 @@
   <meta name="twitter:description" content="面数と個数を指定してサイコロを振るウェブアプリ" />
   <meta name="twitter:image" content="favicon/128.png" />
   <link rel="stylesheet" href="src/style.css" />
-  <link rel="stylesheet" href="src/sp-style.css" />
+  <link rel="stylesheet" href="src/animation/style.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="favicon/128.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon/192.png">
+  <link rel="icon" type="image/png" sizes="192x1929" href="favicon/192.png">
   <link rel="icon" type="image/png" sizes="256x256" href="favicon/256.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicon/512.png">
   <title>Interval Dice</title>
@@ -43,6 +43,8 @@
 </head>
 
 <body>
+  <canvas id="canvas"></canvas>
+
   <h1>サイコロを振る</h1>
 
   <label for="num_sides">サイコロの面数 :</label>
@@ -70,6 +72,7 @@
   <button id="tweetButton" class="tweet-button" onclick="tweetResults()">結果をツイートする</button>
 
   <script src="src/script.js"></script>
+  <script src="src/animation/script.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
