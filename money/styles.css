@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: #333;
+}
+
+#calculator {
+  width: 80%;
+  max-width: 600px;
+}
+
+#calculator div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#calculator label {
+  flex: 1;
+}
+
+#calculator input {
+  flex: 1;
+  margin-left: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#result.exact {
+  color: green;
+}
+
+#result.off {
+  color: red;
+}
