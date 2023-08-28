@@ -11,7 +11,7 @@ document.getElementById('calculator').addEventListener('input', function() {
   var coin1 = document.getElementById('coin1').value * 1 * 50;
   var extraCoins = document.getElementById('extraCoins').value * 1;
 
-  var target = document.getElementById('target').value;
+  var target = Number(document.getElementById('target').value);
   
   var total = note10000 + note5000 + note1000 + coins500 + coin500 + coin100 + coin50 + coin10 + coin5 + coin1 + extraCoins;
   
@@ -23,4 +23,5 @@ document.getElementById('calculator').addEventListener('input', function() {
       resultDiv.textContent = '計算結果: ' + total + '円 (目標から' + (target - total) + '円差)';
       resultDiv.className = 'off';
   }
+  console.log(total,target)
 });
