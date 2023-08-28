@@ -25,3 +25,7 @@ document.getElementById('calculator').addEventListener('input', function() {
   }
   console.log(total,target)
 });
+
+window.onload = function(){
+  document.getElementById("target").value = new URL(window.location.href).searchParams.get("target");
+}
