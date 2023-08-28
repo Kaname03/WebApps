@@ -1,0 +1,16 @@
+{
+  "name": "Calculator",
+  "short_name": "calculator",
+  "description": "面数と個数を指定してサイコロを振るウェブアプリ",
+  "start_url": "/money/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "/money/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
