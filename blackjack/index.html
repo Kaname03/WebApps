@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <title>ブラックジャック</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="dealer-hand" class="hand"></div>
+        <div id="player-hand" class="hand"></div>
+        <div id="scoreboard"></div>
+        <button onclick="hit()" class="button">Hit</button>
+        <button onclick="stand()" class="button">Stand</button>
+        <button onclick="resetGame()" class="button">New Game</button>
+    </div>
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div id="modal" class="modal">
+            <div id="modal-message" class="modal-message"></div>
+            <button id="modal-close" class="modal-close">Close</button>
+        </div>
+    </div>    
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
