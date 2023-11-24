@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>在庫移動管理システム</title>
+  <style>
+    /* ここに必要に応じてスタイリングを追加 */
+  </style>
+</head>
+
+<body>
+  <h1>在庫移動フォーム</h1>
+  <form id="inventoryForm">
+    <div>
+      <label for="fromStore">出庫店番:</label>
+      <input type="text" id="fromStore" name="fromStore" required>
+    </div>
+    <div>
+      <label for="toStore">入庫店番:</label>
+      <input type="text" id="toStore" name="toStore" required>
+    </div>
+    <div>
+      <label for="datetime">日時:</label>
+      <input type="datetime-local" id="datetime" name="datetime" required>
+    </div>
+    <div>
+      <label for="productName">商品名:</label>
+      <input type="text" id="productName" name="productName" required>
+    </div>
+    <div>
+      <label for="quantity">数:</label>
+      <input type="number" id="quantity" name="quantity" required>
+    </div>
+    <div>
+      <label for="unit">単位:</label>
+      <input type="text" id="unit" name="unit" required>
+    </div>
+    <div>
+      <button type="submit">送信</button>
+    </div>
+  </form>
+
+  <script>
+    document.getElementById('inventoryForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const fromStore = document.getElementById('fromStore').value;
+      const toStore = document.getElementById('toStore').value;
+      const datetime = document.getElementById('datetime').value;
+      const productName = document.getElementById('productName').value;
+      const quantity = document.getElementById('quantity').value;
+      const unit = document.getElementById('unit').value;
+
+      // フォームのデータをオブジェクトにまとめる
+      const formData = {
+        fromStore: fromStore,
+        toStore: toStore,
+        datetime: datetime,
+        productName: productName,
+        quantity: quantity,
+        unit: unit
+      };
+
+      // Ajaxリクエストの設定
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://script.google.com/macros/s/AKfycbysT_LEQhjnjQTpISyy_CcNYxSl-fCpK4oKLSY4gVHzKqiadMxJIYf-jpkzniefPHr-/exec', true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      // レスポンスが返ってきたときの処理
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // レスポンス処理（成功時）
+          console.log(xhr.responseText);
+        } else {
+          // エラー処理
+          console.error('エラーが発生しました。');
+        }
+      };
+
+      // データをJSON形式でサーバーに送信
+      xhr.send(JSON.stringify(formData));
+    });
+  </script>
+</body>
+
+</html>
