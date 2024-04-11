@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 // 図形の設定
 var shapes = [];
-var numShapes = 200;
+var numShapes = 300;
 var size = 10;
 for (var i = 0; i < numShapes; i++) {
   var shape = {};
