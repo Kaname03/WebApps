@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>コピー機精算用計算機</title>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="stylesheet" type="text/css" href="../dark/styles.css" media="(prefers-color-scheme:dark">
+  <link rel="icon" href="../favicon.png">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWBV5TE0S"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZVWBV5TE0S');
+	</script>
+</head>
+
+<body>
+  <h1>コピー機精算用計算機</h1>
+  <form id="calculator">
+    <div>
+      <label for="note1000">千円札の枚数:</label>
+      <input type="number" inputmode="numeric" id="note1000" min="0" >
+    </div>
+    <div>
+      <label for="coin500">500円硬貨の枚数:</label>
+      <input type="number" inputmode="numeric" id="coin500" min="0" >
+    </div>
+    <div>
+      <label for="coin100">100円硬貨の本数:</label>
+      <input type="number" inputmode="numeric" id="coin100" min="0" >
+    </div>
+    <div>
+      <label for="coin50">50円硬貨の本数:</label>
+      <input type="number" inputmode="numeric" id="coin50" min="0" >
+    </div>
+    <div>
+      <label for="coin10">10円硬貨の本数:</label>
+      <input type="number" inputmode="numeric" id="coin10" min="0" >
+    </div>
+    <div>
+      <label for="coin5">5円硬貨の本数:</label>
+      <input type="number" inputmode="numeric" id="coin5" min="0" >
+    </div>
+  </form>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
