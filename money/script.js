@@ -26,6 +26,10 @@ document.getElementById('calculator').addEventListener('input', function() {
   console.log(total,target)
 });
 
-window.onload = function(){
-  document.getElementById("target").value = new URL(window.location.href).searchParams.get("target");
-}
+window.onload = function() {
+  const urlParams = new URL(window.location.href).searchParams;
+  const targetValue = urlParams.get("target");
+  if (targetValue !== null) {
+    document.getElementById("target").value = targetValue;
+  }
+};
