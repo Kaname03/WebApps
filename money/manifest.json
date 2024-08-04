@@ -11,6 +11,12 @@
       "src": "/money/favicon.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/money/dark/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "media": "(prefers-color-scheme: dark"
     }
   ]
 }
